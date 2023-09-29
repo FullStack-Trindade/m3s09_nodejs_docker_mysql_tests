@@ -1,0 +1,25 @@
+version: '1.0.0'
+
+services:
+  app:
+    container_name: nodejs-v18.18.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app
+    environment:
+      - PORT=3000
+    ports:
+      - 3000:3000
+  db:
+    container_name: mysql-v5.7
+    image: mysql:5.7
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: api_docker
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./.docker/mysql/dbdata:/var/lib/mysql
+    ports:
+      - 3388:3306

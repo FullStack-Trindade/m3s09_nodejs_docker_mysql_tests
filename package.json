@@ -1,0 +1,26 @@
+{
+  "name": "nodejs_api_docker",
+  "version": "1.0.0",
+  "description": "Criando um ambiente docker com NodeJS + Express",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "docker",
+    "dockerfile",
+    "docker-compose"
+  ],
+  "author": "Robert Santos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
+  }
+}
